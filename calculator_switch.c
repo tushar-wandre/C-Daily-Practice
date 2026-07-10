@@ -1,18 +1,51 @@
 #include<stdio.h>
-int main(){
-int choice;
-printf("enter your choice from 1 to 3:\n");
-scanf("%d",&choice);
-switch(choice){
+int main() {
+    float a,b,result;
+    int choice;
+     
 
-    case 1: printf("₹199 plan activated - 1 GB/day, 28 days");
-    break;
-    case 2: printf("₹199 plan activated - 2 GB/day, 28 days");
-    break;
-    case 3: printf("399 plan activated - 3 GB/day, 28 days");
+    printf("1. ADDITION(+):\n");
+    printf("2. Substraction(-)\n");
+    printf("3. Multiplication(*)\n");
+    printf("4. division(/)\n");
+
+    printf("Enter your choice(1-4):\n");
+    scanf("%d",&choice);
+    
+   printf("Enter your first number:\n");
+   scanf("%f",&a);
+   printf("Enter your second number:\n");
+   scanf("%f",&b);
+
+   switch(choice){
+    case 1:
+    result=a+b;
+    printf("sumation=%.2f",result);
     break;
 
-default :printf("invalide choice:");
-}
+    case 2:
+    result=a-b;
+    printf("subtraction=%.2f",result);
+    break;
+
+    case 3:
+    result=a*b;
+    printf("multiplication=%.2f",result);
+    break;
+
+    case 4:
+    if( b == 0 ){
+        printf("error!,divide by zero is not allowed.\n");
+    }
+    else{
+        result=a/b;
+        printf("divsion=%.2f",result);
+        
+    }
+    break;
+    default:
+    printf("invilid choice!\n");
+   }
+
     return 0;
 }
